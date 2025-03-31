@@ -36,7 +36,7 @@ def main(page: ft.Page):
     def add_task(e):
         if task_input.value.strip():
             task_id = main_db.add_task_db(task_input.value)
-            task_list.controls.append(create_task_row(task_id, task_input.value))
+            task_list.controls.append(create_task_row(task_id, task_input.value, 0))
             task_input.value = ""
         page.update()
 
